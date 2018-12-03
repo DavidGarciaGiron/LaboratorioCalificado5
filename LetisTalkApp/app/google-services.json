@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "539635726138",
+    "firebase_url": "https://letistalkapp.firebaseio.com",
+    "project_id": "letistalkapp",
+    "storage_bucket": "letistalkapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539635726138:android:270bac78ffbdceef",
+        "android_client_info": {
+          "package_name": "pe.edu.tecsup.letistalkapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539635726138-vqmtr8mkdnnu7854e4i4q62gfbol38kg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pe.edu.tecsup.letistalkapp",
+            "certificate_hash": "b700893c0c5335b6e9958c0b41d1b3c7604fffcd"
+          }
+        },
+        {
+          "client_id": "539635726138-mpi57060q6t2pq4lrno2v46fu5nfnt7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEZS0mBnZzfQBCwuP0Dy5qWR8kB168biw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539635726138-mpi57060q6t2pq4lrno2v46fu5nfnt7s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
