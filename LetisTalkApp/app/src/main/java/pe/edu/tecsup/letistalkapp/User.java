@@ -8,6 +8,8 @@ public class User {
 
     private String email;
 
+    private String photoUrl;
+
     public String getUid() {
         return uid;
     }
@@ -32,6 +34,13 @@ public class User {
         this.email = email;
     }
 
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
 
     @Override
     public String toString() {
@@ -39,6 +48,7 @@ public class User {
                 "uid='" + uid + '\'' +
                 ", displayName='" + displayName + '\'' +
                 ", email='" + email + '\'' +
+                ", photoUrl='" + photoUrl + '\'' +
                 '}';
     }
 }

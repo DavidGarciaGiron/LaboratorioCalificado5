@@ -23,8 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="194" />
-                                                <entry key="trimmed" value="true" />
+                                                <entry key="scalingPercent" value="113" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -34,7 +33,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\Alumno\Desktop\icon.jpg" />
+                                      <entry key="foregroundImage" value="C:\Users\MASTER\Pictures\3EE.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -48,6 +47,11 @@
                 </map>
               </option>
             </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState />
           </value>
         </entry>
       </map>
