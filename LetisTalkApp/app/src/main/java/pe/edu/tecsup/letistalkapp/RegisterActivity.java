@@ -22,9 +22,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = RegisterActivity.class.getSimpleName();
 
-    private EditText titleInput;
-    private EditText bodyInput;
-    private ImageView imagenPreview;
+    private EditText nombreInput;
+    private EditText emailInput;
+    private EditText direccionInput;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +37,9 @@ public class RegisterActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        titleInput = findViewById(R.id.title_input);
-        bodyInput = findViewById(R.id.body_input);
-        imagenPreview = findViewById(R.id.imagen_preview);
+        nombreInput = findViewById(R.id.nombre_input);
+        emailInput = findViewById(R.id.email_input);
+        direccionInput = findViewById(R.id.direccion_input);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,10 +66,11 @@ public class RegisterActivity extends AppCompatActivity {
     private void sendPost() {
         Log.d(TAG, " sendPost()");
 
-        String title = titleInput.getText().toString();
-        String body = bodyInput.getText().toString();
+        String nombre = nombreInput.getText().toString();
+        String email = emailInput.getText().toString();
+        String direccion = direccionInput.getText().toString();
 
-        if(title.isEmpty() || body.isEmpty()){
+        if(nombre.isEmpty() || email.isEmpty() || direccion.isEmpty()){
             Toast.makeText(this, "Debes completar todos los campos", Toast.LENGTH_LONG).show();
             return;
         }
@@ -83,8 +85,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         Post post = new Post();
         post.setId(postRef.getKey());
-        post.setTitle(title);
-        post.setBody(body);
+        post.setNombre(nombre);
+        post.setEmail(email);
+        post.setDireccion(direccion);
         post.setUserid(currentUser.getUid());
 
         postRef.setValue(post)
@@ -107,4 +110,5 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 }
+
 

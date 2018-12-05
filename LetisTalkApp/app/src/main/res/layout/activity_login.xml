@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondo"
     android:gravity="center">
 
     <ProgressBar
@@ -26,14 +27,18 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:padding="10dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp"
-            android:text="LABORATORIO CALIFICADO 5" />
+            android:text="LABORATORIO CALIFICADO 5"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
 
         <ImageView
-            android:layout_width="290dp"
-            android:layout_height="162dp"
+            android:layout_width="301dp"
+            android:layout_height="98dp"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:src="@drawable/icon" />
@@ -50,11 +55,20 @@
 
                 <EditText
                     android:id="@+id/email_input"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:hint="Ingrese su Direccion de Correo"
                     android:inputType="textEmailAddress"
-                    android:maxLines="1" />
+                    android:lineSpacingExtra="20sp"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -65,11 +79,20 @@
 
                 <EditText
                     android:id="@+id/password_input"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:hint="Ingrese su Contraseña"
                     android:inputType="textPassword"
-                    android:maxLines="1" />
+                    android:lineSpacingExtra="20sp"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -77,11 +100,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="Sign In"
-                android:textStyle="bold"
                 android:background="@color/colorPrimaryDark"
+                android:onClick="callLogin"
+                android:text="Sign In"
                 android:textColor="@android:color/white"
-                android:onClick="callLogin"/>
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="match_parent"

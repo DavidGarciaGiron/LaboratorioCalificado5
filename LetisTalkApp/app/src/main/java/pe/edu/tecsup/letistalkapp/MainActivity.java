@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //---------------------
         // Lista de post con RecyclerView
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         postsRef.addChildEventListener(childEventListener);
-
+                                           //---------------------
 
 
         // Obtain the FirebaseAnalytics instance.
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         user.setUid(currentUser.getUid());
         user.setDisplayName(currentUser.getDisplayName());
         user.setEmail(currentUser.getEmail());
-        user.setPhotoUrl((currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null));
+        user.setPhotoUrl((currentUser.getPhotoUrl()!=null?currentUser.getPhotoUrl().toString():null));
         // user.setEtc...
 
         DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users");
@@ -149,13 +149,14 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
+                        if(task.isSuccessful()){
                             Log.d(TAG, "onSuccess");
-                        } else {
+                        }else{
                             Log.e(TAG, "onFailure", task.getException());
                         }
                     }
                 });
+
 
 
         FirebaseUser User = FirebaseAuth.getInstance().getCurrentUser();

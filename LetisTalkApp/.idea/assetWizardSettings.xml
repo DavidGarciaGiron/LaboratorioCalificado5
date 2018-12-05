@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="113" />
+                                                <entry key="scalingPercent" value="59" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,7 +33,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\MASTER\Pictures\3EE.png" />
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="0064a6" />
+                                      <entry key="foregroundImage" value="C:\Users\MASTER\Pictures\photos para el labcalificado 2 de android\icon.png" />
                                     </map>
                                   </option>
                                 </PersistentState>

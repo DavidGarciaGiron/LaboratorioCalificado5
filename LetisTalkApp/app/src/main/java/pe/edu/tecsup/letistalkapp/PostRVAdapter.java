@@ -52,9 +52,9 @@ public class PostRVAdapter extends RecyclerView.Adapter<PostRVAdapter.ViewHolder
         TextView displaynameText;
         TextView likesText;
         LikeButton likeButton;
-        ImageView pictureImage;
-        TextView titleText;
-        TextView bodyText;
+        TextView nombreText;
+        TextView emailText;
+        TextView direccionText;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -62,9 +62,10 @@ public class PostRVAdapter extends RecyclerView.Adapter<PostRVAdapter.ViewHolder
             displaynameText = itemView.findViewById(R.id.user_displayname);
             likesText = itemView.findViewById(R.id.like_count);
             likeButton = itemView.findViewById(R.id.like_button);
-            pictureImage = itemView.findViewById(R.id.post_picture);
-            titleText = itemView.findViewById(R.id.post_title);
-            bodyText = itemView.findViewById(R.id.post_body);
+            nombreText = itemView.findViewById(R.id.post_nombre);
+            emailText = itemView.findViewById(R.id.post_email);
+            direccionText = itemView.findViewById(R.id.post_direccion);
+
         }
     }
 
@@ -80,8 +81,9 @@ public class PostRVAdapter extends RecyclerView.Adapter<PostRVAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int position) {
         final Post post = posts.get(position);
 
-        viewHolder.titleText.setText(post.getTitle());
-        viewHolder.bodyText.setText(post.getBody());
+        viewHolder.nombreText.setText(post.getNombre());
+        viewHolder.emailText.setText(post.getEmail());
+        viewHolder.direccionText.setText(post.getDireccion());
 
         // Obteniendo datos del usuario asociado al post (una vez, sin realtime)
         DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(post.getUserid());

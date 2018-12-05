@@ -5,11 +5,17 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Post {
+
     private String id;
+
     private String userid;
-    private String title;
-    private String body;
-    private String photoUrl;
+
+    private String nombre;
+
+    private String email;
+
+    private String direccion;
+
     private Map<String, Boolean> likes = new HashMap<>();
 
     public String getId() {
@@ -28,28 +34,28 @@ public class Post {
         this.userid = userid;
     }
 
-    public String getTitle() {
-        return title;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getBody() {
-        return body;
+    public String getEmail() {
+        return email;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPhotoUrl() {
-        return photoUrl;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public Map<String, Boolean> getLikes() {
@@ -65,12 +71,13 @@ public class Post {
         return "Post{" +
                 "id='" + id + '\'' +
                 ", userid='" + userid + '\'' +
-                ", title='" + title + '\'' +
-                ", body='" + body + '\'' +
-                ", photoUrl='" + photoUrl + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                ", ubicacion='" + direccion + '\'' +
                 ", likes=" + likes +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -78,4 +85,6 @@ public class Post {
         Post post = (Post) o;
         return Objects.equals(id, post.id);
     }
+
 }
+
